@@ -145,16 +145,22 @@ function createMessageElement(messageObject) {
 }
 
 
-function listChannels() {
+
+function listChannels() {console.log('add channels:', channels);
     // #8 channel onload
     //$('#channels ul').append("<li>New Channel</li>")
-
     // #8 five new channels
-    $('#channels ul').append(createChannelElement(yummy));
-    $('#channels ul').append(createChannelElement(sevencontinents));
-    $('#channels ul').append(createChannelElement(killerapp));
-    $('#channels ul').append(createChannelElement(firstpersononmars));
-    $('#channels ul').append(createChannelElement(octoberfest));
+   var i;
+   for(i=0; i<channels.length; i++){
+       console.log('add channel:', channels[i]);
+       $('#channels ul').append(createChannelElement(channels[i]));
+   }
+
+
+  function compareDate(){
+    createdOn.sort(function(a, b)
+    {return a-b});
+
 }
 
 /**
@@ -193,3 +199,7 @@ function createChannelElement(channelObject) {
     // return the complete channel
     return channel;
 }
+}
+
+
+

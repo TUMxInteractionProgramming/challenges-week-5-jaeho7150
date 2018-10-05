@@ -20,9 +20,23 @@
 body {
     background-color: #F5F5F5;
 }
-
-button, strong {
-    text-transform: uppercase;
+button{
+   height: 36px;
+   min-width:  8px;
+   font-size : 14px;
+   border-radius: 8px;
+   padding-left: 16px;
+   padding-right: 16px;
+   margin: 8px;
+   background-color: white;
+   border-color: none;
+   color: black;
+   text-transform: uppercase;
+   box-shadow: 0px 1px 7px 0px;
+}
+/*Remove the blue focus outline*/
+button:focus{
+    outline:none;
 }
 
 /* LAYOUT */
@@ -67,10 +81,13 @@ h1 {
 
     /* MOOCUS image alignment */
     position: relative; /* we need this, so that the image's absolute position is relative to the app bar */
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 h1#left-app-bar {
     padding-left: 72px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+
 }
 
 h1#left-app-bar img {
@@ -158,15 +175,14 @@ li.selected {
     bottom: 0;
     width: 100%;
     display: flex;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+
 }
 
 #tab-bar button, #chat-bar button {
-    background-color: white;
     border: none;
-    font-size: 13px;
     width: 33%;
     height: 72px;
-    padding: 16px;
 
     /* flexify the buttons by growing them equally */
     flex-grow: 1;
@@ -180,7 +196,6 @@ li.selected {
 #tab-bar button i {
     /* #7 #icns #tab select i instead of img and adjust font size */
     display: block;
-    font-size: 24px;
     margin: 0 auto 4px auto;
 }
 
@@ -192,14 +207,11 @@ li.selected {
     flex-grow: 0;
 
     /* #7 #icns #smile adjust fa size */
-    font-size: 24px;
 }
 
 #emojis {
     /* emoji menu */
     /* colors and borders */
-    background-color:white;
-    border: 1px solid black;
 
     /* size & alignment */
     position: absolute;
@@ -219,6 +231,9 @@ li.selected {
 
     /* hide the #smile menu */
     display: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+
+
 }
 
 /* #8 #input #styles for font, border, and alignment */
@@ -254,7 +269,7 @@ li.selected {
     color: black;
 
     width: 30%;
-}
+} 
 
 .message h3 em {
     /* Larger text, non-italic*/
@@ -265,15 +280,18 @@ li.selected {
     text-align: right;
 }
 
+p::before{
+    content: "ssa";
+}
 .message p {
     background-color: white;
     padding: 16px;
+    text-shadow: 2px 2px white;                                                                                        
+
 }
 
 .message button {
     /* +5 min. button*/
-    background-color: #CDDC39;
-    color: black;
     text-transform: uppercase;
 
     /* right/bottom alignment of button */
@@ -284,4 +302,32 @@ li.selected {
 
 .message.own {
     margin-left: 17.5%;
+}
+
+.primary{
+    background-color: #3F51B5;
+    color: white;
+}
+/*darken 15% of background color when hovering*/
+.primary:hover{
+    background-color: #192B8F 
+}
+.accent{
+    background-color: #CDDC39;
+    color: black;
+}
+/*darken 15% of background color when hovering*/
+.accent:hover{
+    background-color: #A7B613;
+}
+#FAB{
+    border-radius: 50%;
+    position: absolute;
+    width:56px;
+    height:56px;
+    font-size:24px;
+    font-weight:bold;
+    padding:auto;
+    bottom:16px;
+    right:16px;
 }

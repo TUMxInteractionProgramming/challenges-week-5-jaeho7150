@@ -1,12 +1,14 @@
 /** #7 #chlob #new: the new yummy channel */
 
+
 var yummy = {
     name: "#Yummy",
     createdOn: new Date(2016, 03, 01), /* month 0 is jan. */
     createdBy: "minus.plus.yummy",
     starred: false,
-    expiresIn: 100,
+    expiresIn: 101,
     messageCount: 999
+
 };
 
 /** #7 #chlob #fve: the other channels */
@@ -46,3 +48,9 @@ var octoberfest = {
     expiresIn: 60,
     messageCount: 321
 };
+
+var channels = [yummy, sevencontinents, killerapp, firstpersononmars, octoberfest];
+
+
+
+
